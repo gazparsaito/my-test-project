@@ -1,0 +1,7 @@
+{
+  "name": "gymfametro",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue-vite"
+}
