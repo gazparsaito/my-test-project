@@ -38,7 +38,7 @@
 
 <script setup lang="ts">
 const handleClick = (title: string) => {
-  console.log(`${title} card clicado`);
+  console.log(`${title} cards clicado`);
 };
 </script>
 

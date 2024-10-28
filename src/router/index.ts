@@ -2,43 +2,52 @@ import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import TabsPage from '../views/TabsPage.vue';
 import LoginScreen from '../views/LoguinScreen.vue';
+// import Tab1Page from '@/views/Tab1Page.vue';
+
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    redirect: '/login'
+    redirect: '/login', // Redireciona para a tela de login
   },
   {
     path: '/login',
-    component: LoginScreen
+    name: 'Login',
+    component: LoginScreen,
   },
   {
-    path: '/tabs/',
+    path: '/tabs',
+    name: 'Tabs',
     component: TabsPage,
     children: [
       {
-        path: '',
-        redirect: '/tabs/tab1'
-      },
-      {
         path: 'tab1',
-        component: () => import('@/views/Tab1Page.vue')
+        name: 'Tab1',
+        component: () => import('@/views/Tab1Page.vue'),
       },
       {
         path: 'tab2',
-        component: () => import('@/views/Tab2Page.vue')
+        name: 'Tab2',
+        component: () => import('@/views/Tab2Page.vue'),
       },
       {
         path: 'tab3',
-        component: () => import('@/views/Tab3Page.vue')
+        name: 'Tab3',
+        component: () => import('@/views/Tab3Page.vue'),
       },
       {
         path: 'tab4',
-        component: () => import('@/views/Tab4Page.vue')
-      }
-    ]
-  }
+        name: 'Tab4',
+        component: () => import('@/views/Tab4Page.vue'),
+      },
+      {
+        path: '',
+        redirect: '/tabs/tab1', // Redirecionamento padrão
+      },
+    ],
+  },
 ];
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

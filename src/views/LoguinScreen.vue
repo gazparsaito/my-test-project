@@ -2,7 +2,7 @@
   <ion-page>
     <div v-if="!loading" class="login-container">
       <img
-        src="C:\Users\Ninja\gymfametro\img\LOGOVERME.png"
+        src="../../img/LOGOVERME.png"
         alt="Logo"
         class="logo"
         style="width: 300px"
@@ -35,9 +35,9 @@
 
           <p class="social-login-title">Logar Com</p>
           <div class="logos-login">
-            <img src="C:\Users\Ninja\gymfametro\img\google.png" alt="" />
-            <img src="C:\Users\Ninja\gymfametro\img\facebook.png" alt="" />
-            <img src="C:\Users\Ninja\gymfametro\img\x.png" alt="" />
+            <img src="../../img/google.png" alt="" /> 
+            <img src="../../img/facebook.png" alt="" />
+            <img src="../../img/x.png" alt="" /> 
           </div>
         </ion-card-content>
       </ion-card>
@@ -55,7 +55,7 @@ import {
   IonItem,
   IonInput,
   IonButton,
-  IonIcon,
+  // IonIcon,
   IonCard,
   IonCardContent,
   IonSpinner,
